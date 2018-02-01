@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="Question sur UML" class="devoir2.question1.B_setter.Quizz">
+        <property name="type" value="Question sur UML"></property>
+        <property name="question" value="Parmi les diagrammes suivants, lequel a été introduit dans UML2 ?"></property>
+        <property name="choix">
+            <array value-type="java.lang.String">
+                <value>Diagramme d'activité</value>
+                <value>Diagramme de Classes</value>
+                <value>Diagramme de Temps</value>
+                <value>Diagramme des cas d'utilisation</value>
+            </array>
+        </property>
+        <property name="reponse" value="1"></property>
+    </bean>
+    <bean id="Question sur CMM" class="devoir2.question1.B_setter.Quizz">
+        <property name="type" value="Question sur CMM"></property>
+        <property name="question" value="3.	La méthode  CMM (Capability Maturity Model) se divise en :"></property>
+        <property name="choix">
+            <array value-type="java.lang.String">
+                <value>a)	3 niveaux</value>
+                <value>b)	4 niveaux</value>
+                <value>c)	5 niveaux</value>
+                <value>d)	6 niveaux</value>
+            </array>
+        </property>
+        <property name="reponse" value="2"></property>
+    </bean>
+    <bean id="quizz" class="devoir2.question1.B_setter.QuizzMasterService">
+        <property name="quizMaster" ref="Question sur CMM"></property>
+    </bean>
+</beans>
