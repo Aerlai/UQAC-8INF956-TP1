@@ -1,4 +1,4 @@
-package devoir2.question1.A;
+package devoir2.question1.A_constructeur;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
