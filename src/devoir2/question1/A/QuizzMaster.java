@@ -1,4 +1,4 @@
-package devoir2.question1;
+package devoir2.question1.A;
 
 public interface QuizzMaster {
 	public String getQuestion ();

@@ -1,4 +1,4 @@
-package devoir2.question1;
+package devoir2.question1.A;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -6,9 +6,10 @@ import java.awt.event.*;
 public class QuizzMasterService {
 	private JFrame ecran;
 	private JRadioButton [] lesBoutons;
-	private QuizzMaster quizMaster = new UMLQuizz();
-	public QuizzMasterService()
+	private QuizzMaster quizMaster; // = new Quizz();
+	public QuizzMasterService(QuizzMaster quizzMaster)
 	{
+		this.quizMaster = quizzMaster;
 		this.ecran = new JFrame();
 		lesBoutons = new JRadioButton [4];
 		ecran.setSize( 450, 200 );
