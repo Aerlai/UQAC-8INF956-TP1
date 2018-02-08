@@ -4,29 +4,27 @@ import java.util.ArrayList;
 
 public class Client {
     // Variable
-    private ArrayList tabCompte;
+    private ArrayList<Compte> tabCompte = new ArrayList<>();
     private String nom;
     private int numeroDeClient;
-    private int nombreDeComptes;
 
     // Constructeur
     public Client(String nom, int id){
         this.nom = nom;
         this.numeroDeClient = id;
-        this.nombreDeComptes = 0;
     }
 
     // Getters
     public int getNbreCompte(){
-        try {
-            return this.tabCompte.size();
-        }catch(Exception e){
-            System.out.println("Il n'y pas de comtpe associé à ce client");
-            return 0;
-        }
+        return this.tabCompte.size();
     }
     public Compte getCompte(int numeroDeCompte){
-        return tabCompte[numeroDeCompte];
+        try {
+            return tabCompte.get(numeroDeCompte);
+        }catch(Exception e){
+            System.out.println("Le compte n'existe pas");
+            return null;
+        }
     }
     // Setters
     public void setNom(String nom){
@@ -35,14 +33,12 @@ public class Client {
 
     // Methodes
     public void ajouterCompte(){
-        this.tabCompte[this.nombreDeComptes] = new Compte();
-        this.nombreDeComptes++;
+        this.tabCompte.add(new Compte());
     }
 
     public void fermerCompte(int num){
         try {
-            this.tabCompte[num] = null;
-            this.nombreDeComptes--;
+            this.tabCompte.remove(num);
         }catch(Exception e){
             System.out.println("le compte n'existe pas");
         }
