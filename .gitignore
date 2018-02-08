@@ -36,3 +36,9 @@ hs_err_pid*
 gen
 .gitignore
 .idea/
+
+\.settings/
+
+bin/
+
+\.classpath
