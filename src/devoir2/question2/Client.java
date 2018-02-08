@@ -1,8 +1,10 @@
 package devoir2.question2;
 
+import java.util.ArrayList;
+
 public class Client {
     // Variable
-    private Compte tabCompte[];
+    private ArrayList tabCompte;
     private String nom;
     private int numeroDeClient;
     private int nombreDeComptes;
@@ -16,10 +18,15 @@ public class Client {
 
     // Getters
     public int getNbreCompte(){
-        return this.tabCompte.length;
+        try {
+            return this.tabCompte.size();
+        }catch(Exception e){
+            System.out.println("Il n'y pas de comtpe associé à ce client");
+            return 0;
+        }
     }
     public Compte getCompte(int numeroDeCompte){
-        return tabCompte[numeroDeCompte]
+        return tabCompte[numeroDeCompte];
     }
     // Setters
     public void setNom(String nom){
@@ -29,10 +36,16 @@ public class Client {
     // Methodes
     public void ajouterCompte(){
         this.tabCompte[this.nombreDeComptes] = new Compte();
+        this.nombreDeComptes++;
     }
 
-    public void fermerCompte(){
-        
+    public void fermerCompte(int num){
+        try {
+            this.tabCompte[num] = null;
+            this.nombreDeComptes--;
+        }catch(Exception e){
+            System.out.println("le compte n'existe pas");
+        }
     }
 
 }
