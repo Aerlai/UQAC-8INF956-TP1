@@ -5,6 +5,11 @@ import java.util.ArrayList;
 public class Client {
     // Variable
     private ArrayList<Compte> tabCompte = new ArrayList<>();
+
+    public String getNom() {
+        return nom;
+    }
+
     private String nom;
     private int numeroDeClient;
 
@@ -32,8 +37,8 @@ public class Client {
     }
 
     // Methodes
-    public void ajouterCompte(){
-        this.tabCompte.add(new Compte());
+    public void ajouterCompte(int solde,double taux, int decouvert){
+        this.tabCompte.add(new Compte(solde,taux,decouvert));
     }
 
     public void fermerCompte(int num){

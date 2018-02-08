@@ -19,11 +19,20 @@ public class Banque {
         }
         return tabClient.get(id);
     }
+
+    public Client getClient(String nom) throws NomClientInconnuException {
+        for(Client c : tabClient){
+            if (c.getNom().equals(nom))
+                return c;
+        }
+        throw new NomClientInconnuException();
+    }
     // Setters
 
     // Methodes
     public void ajouterClient(String nom) {
-        tabClient.add(new Client(nom, nombreDeClient));
+        Client c = new Client(nom, nombreDeClient);
+        tabClient.add(c);
         nombreDeClient++;
     }
 
