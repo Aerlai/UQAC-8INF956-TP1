@@ -1,4 +1,4 @@
-package devoir2.question1.constructor;
+package devoir2.question1.ClassSpring.constructor;
 
 public interface QuizzMaster {
 	public String getQuestion ();

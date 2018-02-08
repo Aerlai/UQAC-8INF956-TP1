@@ -1,4 +1,4 @@
-package devoir2.question1.A_constructeur;
+package devoir2.question1.QuizzSpring.A_constructeur;
 
 public class Quizz implements QuizzMaster {
     private String type;

@@ -1,4 +1,4 @@
-package devoir2.question1.B_setter;
+package devoir2.question1.ClassSpring.setter;
 
 public interface QuizzMaster {
 	public String getQuestion();

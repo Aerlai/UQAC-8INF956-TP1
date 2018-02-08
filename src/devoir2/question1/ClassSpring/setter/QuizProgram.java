@@ -1,4 +1,4 @@
-package devoir2.question1.setter;
+package devoir2.question1.ClassSpring.setter;
 
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.ApplicationContext;
@@ -16,7 +16,7 @@ public class QuizProgram {
 		 //new FileSystemXmlApplicationContext( "src/devoir2/question1/setter/spring-config.xml" );
 		//BeanFactory bf = new ClassPathXmlApplicationContext("src/devoir2/question1/setter/spring-config.xml");
 
-		ApplicationContext applicationContext = new FileSystemXmlApplicationContext("src/devoir2/question1/setter/spring-config.xml");
+		ApplicationContext applicationContext = new FileSystemXmlApplicationContext("src/devoir2/question1/ClassSpring/setter/spring-config.xml");
 		QuizzMasterService quizz = (QuizzMasterService) applicationContext.getBean("quizzM");
 		quizz.lancerQuizz();
 	}

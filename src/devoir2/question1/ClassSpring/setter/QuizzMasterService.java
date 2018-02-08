@@ -1,15 +1,29 @@
-package devoir2.question1.constructor;
+package devoir2.question1.ClassSpring.setter;
+
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class QuizzMasterService {
 	private JFrame ecran;
 	private JRadioButton [] lesBoutons;
-	private QuizzMaster quizMaster;// = new UMLQuizz();
-	public QuizzMasterService(QuizzMaster quizMaster)
-	{
+
+	public QuizzMaster getQuizMaster() {
+		return quizMaster;
+	}
+
+	public void setQuizMaster(QuizzMaster quizMaster) {
 		this.quizMaster = quizMaster;
+	}
+
+
+	private QuizzMaster quizMaster;
+
+	public void lancerQuizz()
+	{
 		this.ecran = new JFrame();
 		lesBoutons = new JRadioButton [4];
 		ecran.setSize( 450, 200 );
