@@ -1,38 +1,20 @@
-package devoir2.question1.B_setter;
-
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.context.support.FileSystemXmlApplicationContext;
-
+package devoir2.question1.ClassSpring.constructor;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
+import java.awt.event.*;
 
 public class QuizzMasterService {
 	private JFrame ecran;
 	private JRadioButton [] lesBoutons;
-
-	public Quizz getQuizMaster() {
-		return quizMaster;
-	}
-
-	public void setQuizMaster(Quizz quizMaster) {
-		this.quizMaster = quizMaster;
-	}
-
-	private Quizz quizMaster;
-	public void lancerQuizz()
+	private QuizzMaster quizMaster;// = new UMLQuizz();
+	public QuizzMasterService(QuizzMaster quizMaster)
 	{
-		ApplicationContext context = new FileSystemXmlApplicationContext( "src/devoir2/question1/B_setter/spring-config.xml" );
-		quizMaster = (Quizz)context.getBean("Question sur CMM");
+		this.quizMaster = quizMaster;
 		this.ecran = new JFrame();
 		lesBoutons = new JRadioButton [4];
 		ecran.setSize( 450, 200 );
 		this.ecran.setTitle(quizMaster.getType());
-		// Fermeture de la fenetre
+		// Fermeture de la fen�tre
 		ecran.addWindowListener( new WindowAdapter() {
 		public void windowClosing( WindowEvent we ) {
 			QuizzMasterService.this.terminer();
@@ -69,6 +51,7 @@ public class QuizzMasterService {
 		panneauCentral.add( panneauChoix, BorderLayout.CENTER);
 		ecran.setVisible( true );
 	}
+
 	private void terminer() {
 		
 		this.ecran.dispose();			

@@ -1,4 +1,8 @@
-package devoir2.question1.setter;
+package devoir2.question1.QuizzSpring.B_setter;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,24 +15,22 @@ public class QuizzMasterService {
 	private JFrame ecran;
 	private JRadioButton [] lesBoutons;
 
-	public QuizzMaster getQuizMaster() {
+	public Quizz getQuizMaster() {
 		return quizMaster;
 	}
 
-	public void setQuizMaster(QuizzMaster quizMaster) {
+	public void setQuizMaster(Quizz quizMaster) {
 		this.quizMaster = quizMaster;
 	}
 
-
-	private QuizzMaster quizMaster;
-
+	private Quizz quizMaster;
 	public void lancerQuizz()
 	{
 		this.ecran = new JFrame();
 		lesBoutons = new JRadioButton [4];
 		ecran.setSize( 450, 200 );
 		this.ecran.setTitle(quizMaster.getType());
-		// Fermeture de la fen�tre
+		// Fermeture de la fenetre
 		ecran.addWindowListener( new WindowAdapter() {
 		public void windowClosing( WindowEvent we ) {
 			QuizzMasterService.this.terminer();
@@ -65,7 +67,6 @@ public class QuizzMasterService {
 		panneauCentral.add( panneauChoix, BorderLayout.CENTER);
 		ecran.setVisible( true );
 	}
-
 	private void terminer() {
 		
 		this.ecran.dispose();			

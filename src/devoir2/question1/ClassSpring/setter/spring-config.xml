@@ -2,9 +2,9 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="quizzUML2" class="devoir2.question1.setter.UMLQuizz" ></bean>
-    <bean id="quizzCMM2" class="devoir2.question1.setter.CMMQuizz"></bean>
-    <bean id="quizzM" class="devoir2.question1.setter.QuizzMasterService">
+    <bean id="quizzUML2" class="devoir2.question1.ClassSpring.setter.UMLQuizz" ></bean>
+    <bean id="quizzCMM2" class="devoir2.question1.ClassSpring.setter.CMMQuizz"></bean>
+    <bean id="quizzM" class="devoir2.question1.ClassSpring.setter.QuizzMasterService">
         <property name="quizMaster" ref="quizzCMM2"></property>
     </bean>
 

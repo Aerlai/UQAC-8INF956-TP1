@@ -3,7 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="Question sur UML" class="devoir2.question1.A_constructeur.Quizz">
+    <bean id="Question sur UML" class="devoir2.question1.QuizzSpring.A_constructeur.Quizz">
         <constructor-arg><value>"Question sur UML"</value></constructor-arg>
         <constructor-arg><value>"Parmi les diagrammes suivants, lequel a été introduit dans UML2 ?"</value></constructor-arg>
         <constructor-arg><value>"Diagramme d'activité"</value></constructor-arg>
@@ -12,7 +12,7 @@
         <constructor-arg><value>"Diagramme des cas d'utilisation"</value></constructor-arg>
         <constructor-arg><value>2</value></constructor-arg>
     </bean>
-    <bean id="Question sur CMM" class="devoir2.question1.A_constructeur.Quizz">
+    <bean id="Question sur CMM" class="devoir2.question1.QuizzSpring.A_constructeur.Quizz">
         <constructor-arg><value>"Question sur CMM"</value></constructor-arg>
         <constructor-arg><value>"3.	La méthode  CMM (Capability Maturity Model) se divise en :"</value></constructor-arg>
         <constructor-arg><value>"a)	3 niveaux"</value></constructor-arg>
@@ -21,7 +21,7 @@
         <constructor-arg><value>"d)	6 niveaux"</value></constructor-arg>
         <constructor-arg><value>2</value></constructor-arg>
     </bean>
-    <bean id="Choix" class="devoir2.question1.A_constructeur.QuizzMasterService">
-        <constructor-arg ref="Question sur UML"></constructor-arg>
+    <bean id="Choix" class="devoir2.question1.QuizzSpring.A_constructeur.QuizzMasterService">
+        <constructor-arg ref="Question sur CMM"></constructor-arg>
     </bean>
 </beans>

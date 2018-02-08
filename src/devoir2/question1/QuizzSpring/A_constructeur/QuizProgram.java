@@ -1,4 +1,4 @@
-package devoir2.question1.A_constructeur;
+package devoir2.question1.QuizzSpring.A_constructeur;
 
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
@@ -9,7 +9,7 @@ public class QuizProgram {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		new FileSystemXmlApplicationContext( "src/devoir2/question1/A_constructeur/spring-config.xml" );
+		new FileSystemXmlApplicationContext( "src/devoir2/question1/QuizzSpring/A_constructeur/spring-config.xml" );
 	}
 
 }
